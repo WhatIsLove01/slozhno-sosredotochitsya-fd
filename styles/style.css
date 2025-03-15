@@ -1,7 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  min-inline-size: 375px;
+  block-size: 100vh;
   min-block-size: 668px;
   display: grid;
   gap: 40px;
@@ -21,31 +21,25 @@
   position: absolute;
   top: 10px;
   right: 38px;
-  content: 'REC';
-  color: var(--accent-color);
-  font-weight: 400;
+  
 }
 
 .header__content-hidden::after {
   content: '';
   position: absolute;
-  top: 17px;
-  right: 18px;
-  background-color: var(--accent-color);
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  filter: blur(1px);
-
+  top: 18px;
+  right: 20px;
 }
 
 .header {
+  block-size: 100vh;
+  min-block-size: 668px;
   padding: 10px;
   position: relative;
 }
 
 .header__theme-menu{
-  margin-block-start: 62px;
+  margin-block-start: clamp(3.875rem, -2.5658rem + 27.4809vw, 10.625rem);
 }
 
 .header__theme-menu-list {
@@ -86,13 +80,13 @@
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
   line-height: 83%;
-  margin-block-start: 66px;
+  margin-block-start: clamp(4.125rem, -2.1966rem + 26.972vw, 10.75rem);
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
 .header__subtitle {
-  margin-block-start: 53px;
-  margin-block-end: 56px;
+  margin-block-start: clamp(3.3125rem, -3.1283rem + 27.4809vw, 10.0625rem);
+  margin-block-end: clamp(3.5rem, -2.8812rem + 27.2265vw, 10.1875rem);
 }
 
 .decorated-zone::before {
@@ -258,6 +252,7 @@
 }
 
 .footer {
+  block-size: 100vh;
   min-block-size: 668px;
   position: relative;
   padding: 10px;
@@ -284,7 +279,7 @@
   border: 1px solid currentColor;
 }
 
-/*
+
 @media (min-width: 768px) {
   .page {
     gap: 60px;
@@ -293,20 +288,13 @@
     padding: 20px;
   }
 
-  .header__theme-menu {
-    margin-block-start: 170px;
-  }
-
   .header__title {
     margin-inline-start: -20px;
-    margin-block-start: 172px;
     text-align: start;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header__subtitle {
-    margin-block-start: 161px;
-    margin-block-end: 163px;
     inline-size: 50%;
     display: flex;
     flex-direction: column;
@@ -405,6 +393,24 @@
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .header__content-hidden::before {
+    content: 'REC';
+    color: var(--accent-color);
+    font-weight: 400;
+  }
+  
+  .header__content-hidden::after {
+    
+    background-color: var(--accent-color);
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    filter: blur(1px);
+  
+  }
+}
+
 @media (min-width: 1024px) {
 
   .header__theme-menu{
@@ -448,4 +454,3 @@
     min-height: 768px;
   }
 }
-*/

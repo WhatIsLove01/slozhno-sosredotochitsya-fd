@@ -13,5 +13,20 @@
   --title-text-color-decor: #000028;
 }
 
+.theme-dark .header__content-hidden::before {
+  content: 'REC';
+  color: var(--accent-color);
+  font-weight: 400;
+}
+
+.theme-dark .header__content-hidden::after {
+  
+  background-color: var(--accent-color);
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  filter: blur(1px);
+
+}
 
 

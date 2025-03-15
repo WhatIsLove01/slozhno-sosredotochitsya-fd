@@ -34,13 +34,11 @@
 }
 
 .theme-light .header__content-hidden::before {
-  /* Вам также нужно будет написать ряд подобных селекторов */
-  content: none;
+  display: none;
 }
 
 .theme-light .header__content-hidden::after {
-  /* Вам также нужно будет написать ряд подобных селекторов */
-  content: none;
+  display: none;
 }
 
 .theme-light .decorated-zone::after {
