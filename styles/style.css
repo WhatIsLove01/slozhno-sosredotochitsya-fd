@@ -230,21 +230,21 @@
 
 /*Секция галерея*/
 
-.gallery {
+.section-gallery {
   display: grid;
   gap: 10px;
 }
 
-.gallery__list {
+.section-gallery__list {
   display: inherit;
   gap: 10px;
 }
 
-.gallery__list-item {
+.section-gallery__list-item {
   display: inherit;
 }
 
-.gallery__image {
+.section-gallery__image {
   inline-size: 100%;
 }
 
@@ -323,17 +323,17 @@
     grid-template-columns: 236px 1fr;
   }
 
-  .gallery {
+  .section-gallery {
     gap: 20px;
   }
 
-  .gallery__list {
+  .section-gallery__list {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, auto);
     gap: 20px;
   }
 
-  .gallery__image {
+  .section-gallery__image {
     object-fit: cover;
     block-size: 100%;
   }

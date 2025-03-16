@@ -11,10 +11,10 @@
   --accent-color: #ff0070;
   --title-text-color: #db00ff;
   --title-text-color-decor: #000028;
-  --button-text-color: var(--accent-color,#ff0070);
+  --button-text-color: var(--accent-color, #ff0070);
   --section-title-text-color: var(--accent-color, #ff0070);
   --button-hover: rgba(255, 0, 112, 0.4);
-  --footer-text-shadow: var(--accent-color,#ff0070);
+  --footer-text-shadow: var(--accent-color, #ff0070);
 }
 
 .theme-dark .header__content-hidden::before {
@@ -31,9 +31,7 @@
   filter: blur(1px);
 }
 
-
 @media (prefers-color-scheme: dark) {
-
   .header__content-hidden::before {
     content: "REC";
     color: var(--accent-color);

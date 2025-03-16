@@ -15,7 +15,7 @@
   --accent-color: #ff8dcb;
   --title-text-color: #ffc2e6;
   --title-text-color-decor: #353430;
-  --button-text-color: var(--text-color,#353430);
+  --button-text-color: var(--text-color, #353430);
   --section-title-text-color: var(--text-color, #353430);
   --button-hover: rgb(53, 52, 48, 0.4);
   --footer-text-shadow: #ff0070;
@@ -29,7 +29,7 @@
     --accent-color: #ff8dcb;
     --title-text-color: #ffc2e6;
     --title-text-color-decor: #353430;
-    --button-text-color: var(--text-color,#353430);
+    --button-text-color: var(--text-color, #353430);
     --section-title-text-color: var(--text-color, #353430);
     --button-hover: rgb(53, 52, 48, 0.4);
     --footer-text-shadow: #ff0070;

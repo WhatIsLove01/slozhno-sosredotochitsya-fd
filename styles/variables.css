@@ -13,8 +13,8 @@
   --accent-color: #ff0070;
   --title-text-color: #db00ff;
   --title-text-color-decor: #000028;
-  --button-text-color: var(--accent-color,#ff0070);
+  --button-text-color: var(--accent-color, #ff0070);
   --section-title-text-color: var(--accent-color, #ff0070);
-  --footer-text-shadow: var(--accent-color,#ff0070);
+  --footer-text-shadow: var(--accent-color, #ff0070);
   --button-hover: rgba(255, 0, 112, 0.4);
 }
