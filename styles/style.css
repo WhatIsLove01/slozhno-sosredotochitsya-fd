@@ -3,11 +3,11 @@
 .page {
   display: grid;
   gap: 40px;
-  color: var(--text-color);
+  color: var(--text-color, #f1b2ce);
   font-family: var(--main-font, sans-serif);
-  font-size: var(--main-font-size);
-  background-color: var(--bg-color);
-  background-image: var(--bg-image);
+  font-size: var(--main-font-size, 18px);
+  background-color: var(--bg-color, #000028);
+  background-image: var(--bg-image, url(../images/cover-image-dark.png));
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -43,7 +43,7 @@
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   justify-content: end;
-  gap: 9px;
+  gap: 11px;
 }
 
 .header__theme-menu-button {
@@ -53,10 +53,11 @@
   color: var(--button-text-color);
   font-weight: 400;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid var(--button-hover);
+  outline: 1px solid var(--button-hover);
 }
 
 .header__theme-menu-button:focus {
@@ -64,20 +65,16 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid currentColor;
+  border-block-end: 1px solid currentColor;
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid currentColor;
+  outline: 1px solid currentColor;
   pointer-events: none;
 }
 
 .header__title {
-  margin-block-start: clamp(4.125rem, -2.1966rem + 26.972vw, 10.75rem);
-  color: var(--title-text-color);
-  font-weight: 700;
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  line-height: 83%;
+  margin-block-start: clamp(4.1875rem, -2.2533rem + 27.4809vw, 10.9375rem);
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
@@ -114,118 +111,46 @@
   gap: 50px;
   padding-inline: 10px;
 }
+/*ceкции общие стили*/
 
-/*Секция Почему*/
-
-.section-why {
+.section-text {
   display: grid;
   gap: 20px;
 }
 
-.section-why__title {
+.section-text__title {
   color: var(--section-title-text-color);
   font-weight: 700;
   font-size: var(--main-font-size);
 }
 
-.section-why__list {
+.section-text__list {
   display: inherit;
   gap: 20px;
 }
 
-.section-why__list-item {
+.section-text__list-item {
   display: inherit;
   gap: 10px;
 }
 
-.section-why__subtitle {
+.section-text__subtitle {
   font-weight: 700;
 }
 
-.section-why__text {
-  font-weight: 400;
-  line-height: var(--main-line-height);
-}
-
-/*Секция Что*/
-
-.section-what {
-  display: grid;
-  gap: 20px;
-}
-
-.section-what__title {
-  color: var(--section-title-text-color);
-  font-weight: 700;
-  font-size: var(--main-font-size);
-}
-
-.section-what__list {
-  display: inherit;
-  gap: 20px;
-}
-
-.section-what__list-item {
-  display: inherit;
-  gap: 10px;
-}
-
-.section-what__subtitle {
-  font-weight: 700;
-}
-
-.section-what__text {
+.section-text__text {
   font-weight: 400;
   line-height: var(--main-line-height);
 }
 
 /*Секция Как*/
 
-.section-how {
-  display: grid;
-  gap: 20px;
-}
-
-.section-how__title {
-  color: var(--section-title-text-color);
-  font-weight: 700;
-  font-size: var(--main-font-size);
-}
-
-.section-how__list {
-  display: inherit;
-  gap: 20px;
-}
-
-.section-how__list-item {
-  display: inherit;
-  gap: 10px;
-}
-
-.section-how__subtitle {
+.section-text__how-subtitle {
   margin-block-end: 10px;
-  font-weight: 700;
 }
 
-.section-how__text {
+.section-text__how-subtitle-small {
   font-weight: 400;
-  line-height: var(--main-line-height);
-}
-
-.section-how__subtitle-small {
-  font-weight: 400;
-}
-
-.title-decor {
-  color: var(--title-text-color-decor);
-  font-size: inherit;
-  line-height: var(--main-line-height);
-  background-color: var(--accent-color);
-}
-
-.text-link {
-  text-decoration: none;
-  text-shadow: 2px 2px 0 var(--accent-color);
 }
 
 /*Секция галерея*/
@@ -245,7 +170,10 @@
 }
 
 .section-gallery__image {
+  object-fit: cover;
+  object-position: center;
   inline-size: 100%;
+  block-size: 100%;
 }
 
 .footer {
@@ -259,13 +187,32 @@
 }
 
 .footer__title {
-  color: var(--title-text-color);
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   text-shadow: 2px 2px 0 var(--footer-text-shadow);
 }
 
+/*Доп стили*/
+
+.site-title {
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 83%;
+}
+
+.title-decor {
+  color: var(--title-text-color-decor);
+  font-size: inherit;
+  line-height: var(--main-line-height);
+  background-color: var(--accent-color);
+}
+
+.text-link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
 .text-link:hover {
-  border-bottom: 1px solid currentColor;
+  border-block-end: 1px solid currentColor;
 }
 
 .text-link:focus {
@@ -273,7 +220,7 @@
 }
 
 .text-link:focus-visible {
-  border: 1px solid currentColor;
+  outline: 1px solid currentColor;
 }
 
 @media (min-width: 768px) {
@@ -284,9 +231,12 @@
     padding: 20px;
   }
 
+  .header__theme-menu-list {
+    gap: 10px;
+  }
+
   .header__title {
     margin-inline-start: -20px;
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     text-align: start;
   }
 
@@ -300,26 +250,16 @@
     padding-inline: 20px;
   }
 
-  .section-why {
+  .section-text__why {
     grid-template-columns: 236px 1fr;
-    gap: 20px;
   }
 
-  .section-what {
-    gap: 20px;
-  }
-
-  .section-what__title {
+  .section-text__what-title {
     display: inherit;
     grid-template-columns: min-content;
   }
 
-  .section-what__list {
-    display: inherit;
-    grid-template-columns: 1fr;
-  }
-
-  .section-how {
+  .section-text__how {
     grid-template-columns: 236px 1fr;
   }
 
@@ -331,11 +271,6 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, auto);
     gap: 20px;
-  }
-
-  .section-gallery__image {
-    object-fit: cover;
-    block-size: 100%;
   }
 
   .image-sunset {
@@ -361,7 +296,7 @@
     min-block-size: 1024px;
   }
 
-  .footer__title {
+  .site-title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
@@ -381,8 +316,8 @@
   }
 
   .header__content-hidden::after {
-    top: 29px;
-    right: 30px;
+    top: 27px;
+    right: 29px;
   }
 }
 
@@ -400,27 +335,27 @@
   }
 
   .header__title {
-    margin-block-start: 273px;
+    margin-block-start: 275px;
   }
 
   .header__subtitle {
     margin-block: 114px;
   }
 
-  .section-why {
+  .section-text__why {
     grid-template-columns: 32% 1fr;
   }
 
-  .section-what__title {
+  .section-text__what-title {
     grid-template-columns: 32%;
   }
 
-  .section-what__list {
+  .section-text__what-list {
     grid-template-columns: repeat(3, 1fr);
     align-items: baseline;
   }
 
-  .section-how {
+  .section-text__how {
     grid-template-columns: 32% 1fr;
   }
 

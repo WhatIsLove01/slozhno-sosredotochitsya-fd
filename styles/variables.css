@@ -4,7 +4,7 @@
 */
 
 :root {
-  --main-font: "IBM Plex mono";
+  --main-font: "IBM Plex mono", Arial;
   --main-font-size: 18px;
   --main-line-height: 130%;
   --bg-color: #000028;
