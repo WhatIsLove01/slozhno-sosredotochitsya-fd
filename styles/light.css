@@ -36,10 +36,12 @@
   }
 }
 
-.theme-light .header__content-hidden::before {
+.theme-light .header__rec {
   display: none;
 }
 
-.theme-light .header__content-hidden::after {
-  display: none;
+@media (prefers-color-scheme: light) {
+  .header__rec {
+    display: none;
+  }
 }

@@ -15,17 +15,24 @@
   block-size: 100vh;
 }
 
-.header__content-hidden::before {
+.header__rec {
   position: absolute;
   top: 10px;
-  right: 38px;
+  right: 19px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--accent-color);
+  font-weight: 400;
 }
 
-.header__content-hidden::after {
+.header__rec::after {
   content: "";
-  position: absolute;
-  top: 18px;
-  right: 20px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px var(--accent-color);
+  background-color: var(--accent-color);
 }
 
 .header {
@@ -310,13 +317,8 @@
     left: 20px;
   }
 
-  .header__content-hidden::before {
+  .header__rec {
     top: 20px;
-    right: 48px;
-  }
-
-  .header__content-hidden::after {
-    top: 27px;
     right: 29px;
   }
 }

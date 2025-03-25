@@ -17,36 +17,6 @@
   --footer-text-shadow: var(--accent-color, #ff0070);
 }
 
-/* без дублиррования кода из media не получается сделать*/
-
-.theme-dark .page {
-  .header__content-hidden::before {
-    content: "REC";
-    color: var(--accent-color);
-    font-weight: 400;
-  }
-
-  .header__content-hidden::after {
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    box-shadow: 0 0 4px 2px var(--accent-color);
-    background-color: var(--accent-color);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .header__content-hidden::before {
-    content: "REC";
-    color: var(--accent-color);
-    font-weight: 400;
-  }
-
-  .header__content-hidden::after {
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    box-shadow: 0 0 4px 2px var(--accent-color);
-    background-color: var(--accent-color);
-  }
+.theme-dark .header__rec {
+  display: flex;
 }
