@@ -21,6 +21,10 @@
   --footer-text-shadow: #ff0070;
 }
 
+.theme-light .header__rec {
+  display: none;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     --bg-color: #fff1f7;
@@ -34,13 +38,6 @@
     --button-hover: rgb(53, 52, 48, 0.4);
     --footer-text-shadow: #ff0070;
   }
-}
-
-.theme-light .header__rec {
-  display: none;
-}
-
-@media (prefers-color-scheme: light) {
   .header__rec {
     display: none;
   }
